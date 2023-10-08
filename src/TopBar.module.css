@@ -1,0 +1,154 @@
+
+.topbar{
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: center; /* Change this line */
+    align-items: center;
+}
+
+.act, .rightPanel {
+    display: flex;
+    align-items: center;
+}
+
+.act {
+    margin-left: 1em;
+}
+
+.acttext{
+    margin-left: 2em;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.currency {
+    display:inline-flex;
+    margin-right: 5em;  
+    gap: 2em; 
+}
+
+.valorantlogo {
+    height: 5em;
+}
+
+.settings {
+    fill: var(--primaryWhite);
+    height: 50px;
+    width: 50px;
+    margin-right: 2em;
+}
+
+.actlabel{
+    font-size: 2em;
+    font-weight: 1000;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.025em;
+    -webkit-text-stroke-color: var(--valorantRed);
+    transform: scaleY(1.5);
+    letter-spacing: 5px;
+}
+
+.actdetails {
+    font-weight: 700;
+    color: var(--primaryWhite);
+}
+
+.currencyIcon{
+    height: 1em;
+}
+
+.credits {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.rankDiv {
+    position: relative;
+    height: 3em;
+    margin: 5px auto;
+}
+
+.rank, .bgRank {
+    transition: all 1s ease-in-out;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rank {
+    z-index: 2;
+    /* Your other styles for .rank */
+}
+
+.rank:hover ~ .bgRank {
+
+    filter: blur(25px);
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform:  rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.currencyText, .agentCurrency {
+    font-weight: 700;
+    font-size: 12px;
+}
+.currencyText:hover, .settings:hover, .agentCurrency:hover {
+    cursor: pointer;
+    color: var(--primaryColor);
+    fill: var(--primaryColor);
+}
+.currencyText, .settings, .agentCurrency {
+    transition: all 200ms ease-in-out;
+}
+
+.agentCurrency:hover {
+    animation-play-state: paused;
+}
+.agentCurrency:not(:hover) {
+    animation-play-state: running;
+}
+
+
+@keyframes colorChange {
+    0% {
+      color: currentcolor; /* Initial color */
+    }
+    50% {
+      color: red; /* Color change to red */
+    }
+    100% {
+      color: currentcolor; /* Color change back to initial color */
+    }
+  }
+  
+  .agentCurrency {
+    animation: colorChange 2000ms infinite; /* Apply the animation to the element */
+  }
+
+.exitModalButtonsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

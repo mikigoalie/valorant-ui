@@ -1,0 +1,41 @@
+.friendlistdiv::-webkit-scrollbar {
+    display: none;
+}
+
+.friendlistdiv {
+    width: 15em;
+    position: fixed;
+    top: 5em;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(rgba(10, 9, 22, 0.24), rgba(10, 9, 22, 0.788));
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: transform 0.3s ease;
+    transform: translateX(10.25em);
+}
+
+
+.hovered {
+    transform: translateX(0);
+}
+
+
+.friendListProfile {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    padding: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: rgba(110, 110, 110, 0.418);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.playerName {
+    font-style: italic;
+    font-weight: 600;
+}

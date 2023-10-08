@@ -1,0 +1,39 @@
+.chatDiv {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 30em;
+}
+
+.section {
+  width: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: none;
+  background-color: rgba(26, 31, 36, 0.534);
+  backdrop-filter: blur(10px);
+}
+
+.input:active {
+  border-color: var(--primaryColor);
+}
+
+.chatSend {
+  fill: #fff;
+  cursor: pointer;
+  transition: all 250ms ease-out;
+  
+}
+.chatSend:active {
+  transform: scale(0.75);
+}
+
+.chatSend:hover {
+  fill: var(--primaryColor);
+}

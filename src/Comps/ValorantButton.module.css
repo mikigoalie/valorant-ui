@@ -1,0 +1,7 @@
+.root {
+    box-shadow: inset 0px 0px 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+.root:hover {
+    box-shadow: inset 0px 0px 2px 1px rgba(255, 243, 203, 0.863);
+}

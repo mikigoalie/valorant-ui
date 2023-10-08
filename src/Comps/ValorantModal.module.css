@@ -1,0 +1,19 @@
+.content {
+    background-color: rgba(19, 25, 34, 0.9);
+    border-bottom: 0.05em solid rgb(243, 254, 255);
+    text-decoration: 'none';
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.0);
+    border-top: 0.075em solid rgb(243, 254, 255);
+}
+
+.close {
+    transition: all 100ms ease-in-out;
+}
+
+.close:hover {
+    background-color: transparent;
+    transform: scale(1.2);
+}
