@@ -17,118 +17,28 @@ export default {
             name: 'L9 Mikigoalie',
             tag: 'LOW9',
             state: "Online",
-            image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg"
+            image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
+            rank: "radiant"
         },
         OTHER: [
             {
                 name: "headshottricker",
                 tag: 'TAG1',
-                state: 'Online',
+                state: 'Busy',
                 image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
                 rank: getRandomRank()
             },
             {
                 name: 'Player 2',
                 tag: 'TAG2',
-                state: 'Busy',
+                state: 'Online',
                 image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
                 rank: getRandomRank()
             },
             {
                 name: 'Player 3',
                 tag: 'TAG3',
-                state: 'In party',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 4',
-                tag: 'TAG4',
-                state: 'In party',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 5',
-                tag: 'TAG5',
-                state: 'In party',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 6',
-                tag: 'TAG6',
-                state: 'Online',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 7',
-                tag: 'TAG7',
-                state: 'Busy',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 8',
-                tag: 'TAG8',
-                state: 'Online',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 9',
-                tag: 'TAG9',
-                state: 'Online',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 10',
-                tag: 'TAG10',
-                state: 'Busy',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 11',
-                tag: 'TAG11',
-                state: 'Busy',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 12',
-                tag: 'TAG12',
-                state: 'Busy',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 13',
-                tag: 'TAG13',
-                state: 'Online',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 14',
-                tag: 'TAG14',
-                state: 'Online',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 15',
-                tag: 'TAG15',
-                state: 'Busy',
-                image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
-            },
-            {
-                name: 'Player 16',
-                tag: 'TAG16',
-                state: 'Online',
+                state: 'Offline',
                 image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
                 rank: getRandomRank()
             },
