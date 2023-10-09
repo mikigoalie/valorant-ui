@@ -1,13 +1,14 @@
-
-.topbar{
+.topbar {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(50px);
     display: flex;
-    justify-content: center; /* Change this line */
+    justify-content: center;
+    /* Change this line */
     align-items: center;
 }
 
-.act, .rightPanel {
+.act,
+.rightPanel {
     display: flex;
     align-items: center;
 }
@@ -16,7 +17,7 @@
     margin-left: 1em;
 }
 
-.acttext{
+.acttext {
     margin-left: 2em;
     display: grid;
     justify-content: flex-start;
@@ -24,9 +25,9 @@
 }
 
 .currency {
-    display:inline-flex;
-    margin-right: 5em;  
-    gap: 2em; 
+    display: inline-flex;
+    margin-right: 5em;
+    gap: 2em;
 }
 
 .valorantlogo {
@@ -40,11 +41,12 @@
     margin-right: 2em;
 }
 
-.actlabel{
+.actlabel {
     font-size: 2em;
     font-weight: 1000;
     color: rgba(0, 0, 0, 0);
-    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.025em;
     -webkit-text-stroke-color: var(--valorantRed);
     transform: scaleY(1.5);
@@ -56,7 +58,7 @@
     color: var(--primaryWhite);
 }
 
-.currencyIcon{
+.currencyIcon {
     height: 1em;
 }
 
@@ -72,7 +74,8 @@
     margin: 5px auto;
 }
 
-.rank, .bgRank {
+.rank,
+.bgRank {
     transition: all 1s ease-in-out;
     height: 3em;
     position: absolute;
@@ -85,7 +88,7 @@
     /* Your other styles for .rank */
 }
 
-.rank:hover ~ .bgRank {
+.rank:hover~.bgRank {
 
     filter: blur(25px);
 }
@@ -94,36 +97,48 @@
     0% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(-5deg);
     }
+
     50% {
         transform: rotate(5deg);
     }
+
     75% {
-        transform:  rotate(-5deg);
+        transform: rotate(-5deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
 }
 
-.currencyText, .agentCurrency {
+.currencyText,
+.agentCurrency {
     font-weight: 700;
     font-size: 12px;
 }
-.currencyText:hover, .settings:hover, .agentCurrency:hover {
+
+.currencyText:hover,
+.settings:hover,
+.agentCurrency:hover {
     cursor: pointer;
     color: var(--primaryColor);
     fill: var(--primaryColor);
 }
-.currencyText, .settings, .agentCurrency {
+
+.currencyText,
+.settings,
+.agentCurrency {
     transition: all 200ms ease-in-out;
 }
 
 .agentCurrency:hover {
     animation-play-state: paused;
 }
+
 .agentCurrency:not(:hover) {
     animation-play-state: running;
 }
@@ -131,19 +146,25 @@
 
 @keyframes colorChange {
     0% {
-      color: currentcolor; /* Initial color */
+        color: currentcolor;
+        /* Initial color */
     }
+
     50% {
-      color: red; /* Color change to red */
+        color: red;
+        /* Color change to red */
     }
+
     100% {
-      color: currentcolor; /* Color change back to initial color */
+        color: currentcolor;
+        /* Color change back to initial color */
     }
-  }
-  
-  .agentCurrency {
-    animation: colorChange 2000ms infinite; /* Apply the animation to the element */
-  }
+}
+
+.agentCurrency {
+    animation: colorChange 2000ms infinite;
+    /* Apply the animation to the element */
+}
 
 .exitModalButtonsDiv {
     display: flex;
@@ -151,4 +172,3 @@
     align-items: center;
     flex-direction: column;
 }
-

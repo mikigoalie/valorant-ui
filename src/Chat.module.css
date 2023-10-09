@@ -2,14 +2,16 @@
   position: fixed;
   bottom: 5%;
   left: 5%;
-  width: 30em;
+  width: 25vw;
 }
 
 .section {
+
   width: auto;
   margin-left: 1em;
   margin-right: 1em;
 }
+
 
 .input{
   border-top: none;

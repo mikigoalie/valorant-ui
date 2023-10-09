@@ -1,3 +1,15 @@
+.root {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(19, 25, 34, 0.9);
+
+}
+
+.description,
 .title {
-    color: red;
+    color: var(--mantine-color-white);
+}
+
+.closeButton {
+    color: var(--mantine-color-white);
 }

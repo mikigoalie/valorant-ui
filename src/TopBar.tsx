@@ -1,11 +1,10 @@
 
 import { useDisclosure } from '@mantine/hooks';
 import { Tooltip, SimpleGrid } from '@mantine/core';
-import { notifications } from '@mantine/notifications';
 import classes from './TopBar.module.css'
 import ValorantModal from './Comps/ValorantModal';
 import ValorantButton from './Comps/ValorantButton';
-
+import { NRYNotification } from './Comps/Notifs';
 
 function App() {
     const [openedModal1, { open: openModal1, close: closeModal1 }] = useDisclosure(false);
@@ -25,17 +24,9 @@ function App() {
                         display: "grid"
                     }}>
                         <SimpleGrid style={{ width: "15em" }} cols={1} spacing="sm" verticalSpacing="sm">
-                            <ValorantButton
-                                onClick={() => {
-                                    notifications.show({
-                                        title: 'Default notification',
-                                        message: 'Hey there, your code is awesome! 🤥',
-                                    })
-                                }
-
-                                } color="gray.8">SETTINGS</ValorantButton>
-                            <ValorantButton color="gray.8">SUPPORT</ValorantButton>
-                            <ValorantButton color="gray.8">ABOUT</ValorantButton>
+                            <ValorantButton onClick={NRYNotification} color="gray.8">SETTINGS</ValorantButton>
+                            <ValorantButton onClick={NRYNotification} color="gray.8">SUPPORT</ValorantButton>
+                            <ValorantButton onClick={NRYNotification} color="gray.8">ABOUT</ValorantButton>
                             <br></br>
 
                             <ValorantButton onClick={() => { window.location.reload(); }} color="red.5">EXIT TO DESKTOP</ValorantButton>

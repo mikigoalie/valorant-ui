@@ -17,27 +17,27 @@ function App() {
     }, 1500)
   }, [])
 
-  console.log('WTF')
-
   return (
     <>
       {loading ? (
         <Loading></Loading>
       ) : (
         <>
+          <div className='bgVideo'>
+            <video disablePictureInPicture src={BgVideo} loop autoPlay />
+          </div>
 
-          <span style={{ zIndex: 1, position: 'relative' }}>
+          <div style={{ zIndex: 1 }}>
             <TopBar />
             <LeftButtonMenu />
 
             <FeaturesSkin></FeaturesSkin>
             <Chat></Chat>
             <FriendList />
-          </span>
-
-          <div className='bgVideo'>
-            <video disablePictureInPicture src={BgVideo} loop autoPlay />
           </div>
+
+
+
         </>
       )}
 
@@ -47,3 +47,12 @@ function App() {
 }
 
 export default App
+
+
+{/* <span style={{ zIndex: 1, position: 'relative', width: "100vw", height: "100vh" }}>
+
+</span>
+
+<div className='bgVideo'>
+  <video disablePictureInPicture src={BgVideo} loop autoPlay />
+</div> */}

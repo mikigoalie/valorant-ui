@@ -5,7 +5,6 @@ const getRandomRank = () => {
     return ranksArray[randomIndex];
 };
 
-
 export default {
     FEATURED_SKINS: {
         BUNDLE_IMAGE: "https://media.discordapp.net/attachments/1158956736183533598/1158956736401653810/image.png",
@@ -26,14 +25,16 @@ export default {
                 tag: 'TAG1',
                 state: 'Busy',
                 image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
+                rank: getRandomRank(),
+                party: 5
             },
             {
                 name: 'Player 2',
                 tag: 'TAG2',
                 state: 'Online',
                 image: "https://i.pinimg.com/originals/b1/db/b2/b1dbb25bf0fabd6d0b77056529487539.jpg",
-                rank: getRandomRank()
+                rank: getRandomRank(),
+                party: 5
             },
             {
                 name: 'Player 3',
