@@ -4,7 +4,7 @@ const getRandomRank = () => {
     const randomIndex = Math.floor(Math.random() * ranksArray.length);
     return ranksArray[randomIndex];
 };
-
+//              party: Math.floor(Math.random() * 5),
 const titles = ['uWu', 'Old Dog', 'Nibber', 'Swift', 'Stellar', 'Coach', 'Toxic', 'Harbinger', 'Fishy', 'Gatecrasher', 'Catfish', 'Cringe']
 
 export default {
@@ -18,37 +18,79 @@ export default {
             name: 'L9 Mikigoalie',
             tag: 'LOW9',
             title: titles[titles.length],
+            level: 125,
             state: "Online",
             image: '../../public/PlayerCards/Playercard_JettvsJett_S.png',
             rank: "immortal3"
         },
         OTHER: [
             {
-                name: "headshottricker",
-                tag: 'TAG1',
+                name: "Reaqus",
+                tag: 'lll',
                 title: titles[Math.floor(Math.random() * titles.length)],
-                state: 'Busy',
-                image: '../../public/PlayerCards/Playercard_AmusementParkGold_S.png',
+                level: Math.floor(Math.random() * 1001),
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_VitruvianWingman_S.png',
                 rank: getRandomRank(),
-                party: 5
             },
             {
-                name: 'Player 2',
-                tag: 'TAG2',
+                name: "fleurs",
+                tag: 'evil',
                 title: titles[Math.floor(Math.random() * titles.length)],
-                state: 'Online',
-                image: '../../public/PlayerCards/Playercard_AmusementPark_S.png',
+                level: Math.floor(Math.random() * 1001),
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_JettvsJett_S.png',
                 rank: getRandomRank(),
-                party: 5
             },
             {
-                name: 'Player 3',
-                tag: 'TAG3',
+                name: "Aryanna",
+                tag: 'QUEEN',
                 title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
                 image: '../../public/PlayerCards/Playercard_GiveBack_S.png',
-                rank: getRandomRank()
+                rank: getRandomRank(),
             },
+            {
+                name: "MOMMY",
+                tag: 'cutyp',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_AmusementParkGold_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "PRINCESS Olivia",
+                tag: 'Luv',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_BattleSage_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "TQ Soloff",
+                tag: 'RETARD',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: 9999,
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_EP1KeyArt_S.png',
+                rank: 'iron1',
+            },
+
+            {
+                name: "Killua",
+                tag: 'hehh',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: 'Offline',
+                image: '../../public/PlayerCards/Playercard_AmusementParkGold_S.png',
+                rank: getRandomRank(),
+            },
+
         ]
     }
 }
