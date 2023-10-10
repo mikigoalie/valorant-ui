@@ -87,9 +87,12 @@
     z-index: 2;
     /* Your other styles for .rank */
 }
+.rank:hover {
+    filter: drop-shadow(0 0 5px);
+}
+
 
 .rank:hover~.bgRank {
-
     filter: blur(25px);
 }
 

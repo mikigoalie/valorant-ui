@@ -1,4 +1,4 @@
-import { Avatar, Badge, Menu } from '@mantine/core';
+import { Avatar, Badge, HoverCard } from '@mantine/core';
 import classes from './FriendList.module.css';
 import Config from '../../config';
 import { RANKS } from '../../Comps/Ranks';
@@ -6,7 +6,8 @@ import { useState } from 'react';
 
 export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
   const users = Config.ACCOUNTS.OTHER;
-  const [FLDown, setFLDown] = useState(false);
+  const [FLDownOnline, setFLDownOnline] = useState(true);
+  const [FLDownOffline, setFLDownOffline] = useState(true);
 
   const mouseClick = (e: any) => {
     e.preventDefault();
@@ -22,18 +23,18 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
         : 'orange'
 
     return (
-      <Menu
+      <HoverCard
         keepMounted={true}
         disabled={!hovered}
-        trigger='hover'
         offset={4}
         withArrow
         position="left-start"
         onPositionChange={() => console.log('POS CHANGEDS')}
         key={user.id}
         transitionProps={{ exitDuration: 300, duration: 500, transition: 'slide-right', timingFunction: "ease" }}
+        shadow="md"
       >
-        <Menu.Target>
+        <HoverCard.Target>
           <div
             className={`${classes.friendListProfile}`}
             style={{
@@ -61,8 +62,8 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
                   marginLeft: '1em',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'flex-start',
                   alignItems: 'flex-start',
+                  rowGap: "none",
                 }}
               >
                 <span className={`${classes.playerName} ${isSelf ? classes.selfPlayer : ''}`}>{user.name}</span>
@@ -81,9 +82,8 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
             )}
 
           </div>
-        </Menu.Target>
-
-        <Menu.Dropdown>
+        </HoverCard.Target>
+        <HoverCard.Dropdown>
           <div style={{
             width: "18rem",
             height: "9rem",
@@ -92,8 +92,6 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
             flexDirection: "column",
             justifyContent: "space-between"
           }}>
-
-
             <div style={{ width: "auto" }}>
               <div>
                 <span>{user.name}</span>
@@ -101,7 +99,7 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
 
               </div>
 
-              <span style={{ fontSize: ".8rem" }}>{`VCT MASTERS BARCELONA WINNER`}</span>
+              <span style={{ fontSize: ".8rem" }}>{isSelf ? 'VCT Masters Madrid Winner' : user.title}</span>
 
             </div>
             <div style={{ width: "auto" }}>
@@ -120,11 +118,14 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
             </div>
 
           </div>
-        </Menu.Dropdown>
-      </Menu>
+        </HoverCard.Dropdown>
+      </HoverCard>
     );
   };
 
+
+  const offlineFirends = users.filter(user => user.state === 'Offline').map((user) => renderFriendList(user, false))
+  const onlineFriends = users.filter(user => user.state !== 'Offline').map((user) => renderFriendList(user, false))
   return (
     <>
       <div onMouseDown={mouseClick}>
@@ -133,13 +134,13 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
 
 
       <div style={{ fontWeight: "700", marginBottom: '.5rem', marginTop: '.5rem', fontSize: ".8rem", width: "100%", paddingLeft: "1rem", paddingRight: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
-        <span>{`Friends online ${users.length}`}</span>
+        <span>{`Friends online ${onlineFriends.length}`}</span>
         <svg
-          onClick={() => setFLDown(!FLDown)}
+          onClick={() => setFLDownOnline(!FLDownOnline)}
           style={{
             cursor: "pointer",
             fill: "white",
-            transform: `${FLDown ? 'rotate(180deg)' : 'rotate(0)'}`,
+            transform: `${FLDownOnline ? 'rotate(180deg)' : 'rotate(0)'}`,
             transition: "all 500ms"
           }}
           xmlns="http://www.w3.org/2000/svg"
@@ -149,19 +150,19 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
           <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg>
       </div>
 
-      <div style={{ visibility: `${FLDown ? 'visible' : 'collapse'}` }} onMouseDown={mouseClick}>
-        {users.map((user) => renderFriendList(user, false))}
+      <div style={{ height: `${FLDownOnline ? 'auto' : '0'}`, display: `${FLDownOnline ? 'block' : 'none'}` }} onMouseDown={mouseClick}>
+        {onlineFriends}
       </div>
 
 
       <div style={{ fontWeight: "700", marginBottom: '.5rem', marginTop: '.5rem', fontSize: ".8rem", width: "100%", paddingLeft: "1rem", paddingRight: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
-        <span>{`Friends offline ${users.length}`}</span>
+        <span>{`Friends offline ${offlineFirends.length}`}</span>
         <svg
-          onClick={() => setFLDown(!FLDown)}
+          onClick={() => setFLDownOffline(!FLDownOffline)}
           style={{
             cursor: "pointer",
             fill: "white",
-            transform: `${FLDown ? 'rotate(180deg)' : 'rotate(0)'}`,
+            transform: `${FLDownOffline ? 'rotate(180deg)' : 'rotate(0)'}`,
             transition: "all 500ms"
           }}
           xmlns="http://www.w3.org/2000/svg"
@@ -170,8 +171,8 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
         >
           <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg>
       </div>
-      <div style={{ visibility: `${FLDown ? 'visible' : 'collapse'}` }} onMouseDown={mouseClick}>
-        {users.map((user) => renderFriendList(user, false))}
+      <div style={{ display: `${FLDownOffline ? 'block' : 'none'}` }} onMouseDown={mouseClick}>
+        {offlineFirends}
       </div>
     </>
   );

@@ -5,6 +5,8 @@ import classes from './TopBar.module.css'
 import ValorantModal from './Comps/ValorantModal';
 import ValorantButton from './Comps/ValorantButton';
 import { NRYNotification } from './Comps/Notifs';
+import { RANKS } from './Comps/Ranks';
+import config from './config';
 
 function App() {
     const [openedModal1, { open: openModal1, close: closeModal1 }] = useDisclosure(false);
@@ -51,9 +53,9 @@ function App() {
 
                 <div className={classes.rankDiv}>
                     <Tooltip label="Your current rank" transitionProps={{ transition: 'slide-down', duration: 300 }} withArrow openDelay={200}>
-                        <img className={classes.rank} src={"https://static.wikia.nocookie.net/valorant/images/1/1a/Radiant_Rank.png"}></img>
+                        <img className={classes.rank} src={RANKS[config.ACCOUNTS.SELF.rank]}></img>
                     </Tooltip>
-                    <img className={classes.bgRank} src={"https://static.wikia.nocookie.net/valorant/images/1/1a/Radiant_Rank.png"}></img>
+                    <img className={classes.bgRank} src={RANKS[config.ACCOUNTS.SELF.rank]}></img>
                 </div>
 
 
