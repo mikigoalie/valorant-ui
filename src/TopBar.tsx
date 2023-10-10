@@ -32,7 +32,7 @@ function App() {
                             <br></br>
 
                             <ValorantButton onClick={() => { window.location.reload(); }} color="red.5">EXIT TO DESKTOP</ValorantButton>
-                            <span style={{ fontSize: "12px", display: 'flex', justifyContent: "center", alignItems: 'center' }}>mikigoalie</span>
+                            <span style={{ fontSize: "12px", display: 'flex', justifyContent: "center", alignItems: 'center' }}>v0.1</span>
                         </SimpleGrid>
                     </span>
                 }
