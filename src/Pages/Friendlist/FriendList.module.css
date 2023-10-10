@@ -47,11 +47,10 @@
 }
 
 .selfPlayer {
-    color: #fff;
+    color: #ffffff7e;
+
     text-shadow:
-      0 0 3px #fcfdb8,
-      0 0 10px #fff,
-      0 0 30px rgb(255, 238, 0);
+    0 0 5px rgb(255, 145, 0);
 }
 
 
