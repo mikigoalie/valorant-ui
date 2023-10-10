@@ -20,7 +20,7 @@ export default {
             title: titles[titles.length],
             level: 125,
             state: "Online",
-            image: '../../public/PlayerCards/Playercard_JettvsJett_S.png',
+            image: './PlayerCards/Playercard_JettvsJett_S.png',
             rank: "immortal3"
         },
         OTHER: [
@@ -30,7 +30,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_VitruvianWingman_S.png',
+                image: './PlayerCards/Playercard_VitruvianWingman_S.png',
                 rank: getRandomRank(),
             },
             {
@@ -39,7 +39,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_JettvsJett_S.png',
+                image: './PlayerCards/Playercard_JettvsJett_S.png',
                 rank: getRandomRank(),
             },
             {
@@ -48,7 +48,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_GiveBack_S.png',
+                image: './PlayerCards/Playercard_GiveBack_S.png',
                 rank: getRandomRank(),
             },
             {
@@ -57,7 +57,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_AmusementParkGold_S.png',
+                image: './PlayerCards/Playercard_AmusementParkGold_S.png',
                 rank: getRandomRank(),
             },
 
@@ -67,7 +67,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_BattleSage_S.png',
+                image: './PlayerCards/Playercard_BattleSage_S.png',
                 rank: getRandomRank(),
             },
 
@@ -77,7 +77,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: 9999,
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_EP1KeyArt_S.png',
+                image: './PlayerCards/Playercard_EP1KeyArt_S.png',
                 rank: 'iron1',
             },
 
@@ -87,7 +87,7 @@ export default {
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
                 state: 'Offline',
-                image: '../../public/PlayerCards/Playercard_AmusementParkGold_S.png',
+                image: './PlayerCards/Playercard_AmusementParkGold_S.png',
                 rank: getRandomRank(),
             },
 

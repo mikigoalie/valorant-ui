@@ -115,9 +115,9 @@ export default function FriendlistProfile({ hovered }: { hovered: boolean }) {
                   radius="sm"
                   src={user.image}
                 />
-                <img style={{ position: 'relative', top: 0, left: 0 }} src='../../public/LevelBorders/BorderPlayercard01Tier05.png' alt='Border'></img>
+                <img style={{ position: 'relative', top: 0, left: 0 }} src='./LevelBorders/BorderPlayercard01Tier05.png' alt='Border'></img>
                 <div style={{ position: 'relative' }}>
-                  <img style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: 0 }} height={"30em"} src='../../public/LevelBorders/BorderLevel01Tier01.png' alt='Level Border'></img>
+                  <img style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: 0 }} height={"30em"} src='./LevelBorders/BorderLevel01Tier01.png' alt='Level Border'></img>
                   <span style={{
                     fontSize: ".8em",
                     position: 'absolute',
