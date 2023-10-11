@@ -25,11 +25,109 @@ export default {
         },
         OTHER: [
             {
+                name: "RIKU",
+                tag: '20MG',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_VitruvianWingman_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "Probably",
+                tag: 'IDK',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_VitruvianWingman_S.png',
+                rank: getRandomRank(),
+                party: Math.floor(Math.random() * 5),
+            },
+            {
+                name: "Enemy",
+                tag: 'LBN',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_JettvsJett_S.png',
+                rank: getRandomRank(),
+                party: Math.floor(Math.random() * 5),
+            },
+            {
+                name: "I MISS",
+                tag: 'QUEEN',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_GiveBack_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "Carter",
+                tag: '915',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_AmusementParkGold_S.png',
+                rank: getRandomRank(),
+                party: Math.floor(Math.random() * 5),
+            },
+
+            {
+                name: "ripbenji",
+                tag: '777',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_AmusementParkGold_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "mathias",
+                tag: 'solo',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_BattleSage_S.png',
+                rank: getRandomRank(),
+            },
+
+            {
+                name: "poneconne",
+                tag: 'yayay',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: 9999,
+                state: "Online",
+                image: './PlayerCards/Playercard_EP1KeyArt_S.png',
+                rank: 'iron1',
+                party: Math.floor(Math.random() * 5),
+            },
+
+            {
+                name: "Carter",
+                tag: '915',
+                title: titles[Math.floor(Math.random() * titles.length)],
+                level: Math.floor(Math.random() * 1001),
+                state: "Online",
+                image: './PlayerCards/Playercard_AmusementParkGold_S.png',
+                rank: getRandomRank(),
+                party: Math.floor(Math.random() * 5),
+            },
+
+
+
+
+
+
+
+            {
                 name: "Reaqus",
                 tag: 'lll',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_VitruvianWingman_S.png',
                 rank: getRandomRank(),
             },
@@ -38,7 +136,6 @@ export default {
                 tag: 'evil',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_JettvsJett_S.png',
                 rank: getRandomRank(),
             },
@@ -47,7 +144,6 @@ export default {
                 tag: 'QUEEN',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_GiveBack_S.png',
                 rank: getRandomRank(),
             },
@@ -56,7 +152,6 @@ export default {
                 tag: 'cutyp',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_AmusementParkGold_S.png',
                 rank: getRandomRank(),
             },
@@ -66,7 +161,6 @@ export default {
                 tag: 'Luv',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_BattleSage_S.png',
                 rank: getRandomRank(),
             },
@@ -76,7 +170,6 @@ export default {
                 tag: 'RETARD',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: 9999,
-                state: 'Offline',
                 image: './PlayerCards/Playercard_EP1KeyArt_S.png',
                 rank: 'iron1',
             },
@@ -86,7 +179,6 @@ export default {
                 tag: 'hehh',
                 title: titles[Math.floor(Math.random() * titles.length)],
                 level: Math.floor(Math.random() * 1001),
-                state: 'Offline',
                 image: './PlayerCards/Playercard_AmusementParkGold_S.png',
                 rank: getRandomRank(),
             },

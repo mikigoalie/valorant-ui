@@ -55,7 +55,7 @@ export default function Chat() {
           input: classes.input,
         }}
         styles={{
-          input: { paddingLeft: `${padding}px`},
+          input: { cursor: "default", paddingLeft: `${padding}px`},
         }}
         rightSectionPointerEvents="all"
         rightSection={

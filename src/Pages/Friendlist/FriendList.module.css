@@ -3,7 +3,7 @@
     position: fixed;
     top: 5em;
     right: 0;
-    height: 100%;
+    height: calc(100% - 5em); /* Adjust the 2em based on your taskbar height */
     background: linear-gradient(rgba(10, 9, 22, 0.24), rgba(10, 9, 22, 0.788));
     overflow: scroll;
     -ms-overflow-style: none;
@@ -48,9 +48,15 @@
 
 .selfPlayer {
     color: #ffffff7e;
-
     text-shadow:
     0 0 5px rgb(255, 145, 0);
 }
 
+
+.rankDisplayLabel {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-shadow: 2px 1px 9px currentColor;
+}
 
